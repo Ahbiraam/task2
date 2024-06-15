@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .image-container {
+            position: relative;
+            text-align: center;
+        }
+        .centered-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .carousel-inner {
+            position: relative;
+        }
+        .carousel .centered-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .card1{
+            height: 300px;
+            width: 400px;
+            border: solid 1px;
+        }
+        .cardclass{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .cardimg{
+            height: 300px;
+            width: 400px;
+            transition: transform 0.5s ease;
+        }
+        .card1:hover .cardimg {
+            transform: scale(1.1);
+        }
+     
+        .card1:hover .overlay {
+            opacity: 1;
+        }
+        .cardtwo{
+            height: 300px;
+            width: 400px;
+            border: solid 1px;
+            border-radius: 10px;
+            border-color: red;
+
+        }
+        .second{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+
+
+        }
+        .two{
+            height: 250px;
+            width: 400px;
+            object-fit: cover;
+            align-items: center;
+            justify-content: center;
+        }
+       .second p{
+            text-align: center;
+        }
+        .review{
+            display: flex;
+            justify-content:space-around;
+            margin-top: 30px;
+
+
+        }
+        .customer{
+            height: 250px;
+            width: 400px;
+            object-fit: cover;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .reviewcus{
+            height: 250px;
+            width: 400px;
+            object-fit: cover;
+            align-items: center;
+            justify-content: center;
+        }
+        .rating{
+            width: 60px;
+        }
+        .footerl{
+            margin-top: 150px;
+        }
+        p{
+            font-weight: bold;
+        }
+  
+
+    
+
+        
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">TRAVEL <span>guide</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            packages
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">transpot</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">hotel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">support</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="image-container">
+        <img src="./travel.jpg" alt="Travel" width="100%" height="800px">
+        <button type="button" class="btn btn-primary centered-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            more details
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modaledit">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Please share your details</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        name
+                    </div>
+                    <hr>
+                    <div class="modal-body">
+                        email
+                    </div>
+                    <hr>
+                    <div class="modal-body">
+                        phone number
+                    </div>
+                    <hr>
+                    <div class="modal-body">
+                        your preference
+                    </div>
+                    <hr>
+                    <div class="modal-body">
+                        number of members
+                    </div>
+                    <hr>
+                    <div class="modal-body">
+                        message
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary">submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Honeymoon packages -->
+    <div>
+        <h2>Honeymoon Packages</h2>
+    </div>
+    <div class="d-flex justify-content-evenly align-items-center mt-5 mb-5">
+        <!-- Kerala -->
+        <div class="card" style="width: 18rem;">
+            <img src="./1.jpg" class="card-img-top" alt="Kerala">
+            <div class="card-body">
+                <h5 class="card-title">Kerala Honeymoon Packages</h5>
+                <p class="card-text">Escape to the enchanting landscapes of Kerala with our specially curated honeymoon tour packages. Experience the romance of Kerala's serene backwaters, lush green tea gardens, and pristine beaches. Our packages offer a blend of luxury and adventure, ensuring a memorable start to your married life. Enjoy cozy houseboat stays in Alleppey, explore the hill stations of Munnar, and relax on the sandy shores of Kovalam.</p>
+                <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+        <!-- Maldives -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.ahstatic.com/photos/b986_ho_00_p_1024x768.jpg" class="card-img-top" alt="Maldives">
+            <div class="card-body">
+                <h5 class="card-title">Maldives Honeymoon Packages</h5>
+                <p class="card-text">Indulge in the ultimate romantic getaway with our Maldives honeymoon tour packages. The Maldives, known for its crystal-clear turquoise waters, stunning coral reefs, and luxurious overwater bungalows, is the perfect destination for newlyweds. Enjoy intimate dinners on the beach, explore vibrant marine life while snorkeling, and unwind with spa treatments tailored for couples. Our packages provide the perfect balance of relaxation and adventure.</p>
+                <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+        <!-- Manali -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://hikerwolf.com/wp-content/uploads/2020/04/WhatsApp-Image-2020-04-02-at-7.18.33-PM-1046x800.jpeg" class="card-img-top" alt="Manali">
+            <div class="card-body">
+                <h5 class="card-title">Manali Honeymoon Packages</h5>
+                <p class="card-text">Embark on a romantic adventure with our Manali honeymoon tour packages. Nestled in the majestic Himalayas, Manali offers a perfect blend of natural beauty and charming experiences for newlyweds. Wander through picturesque valleys, visit ancient temples, and indulge in thrilling activities like paragliding and river rafting. Our packages include cozy stays in luxury resorts, romantic dinners, and personalized itineraries to make your honeymoon unforgettable.</p>
+                <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+        <!-- Goa -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://assets.cntraveller.in/photos/65169715f1f1534fc4e0f24d/4:3/w_1640,h_1230,c_limit/W%20Goa.jpg" class="card-img-top" alt="Goa">
+            <div class="card-body">
+                <h5 class="card-title">Goa Honeymoon Packages</h5>
+                <p class="card-text">Celebrate your love with our exclusive Goa honeymoon tour packages. Known for its sun-kissed beaches, vibrant nightlife, and rich cultural heritage, Goa offers an ideal setting for a romantic getaway. Stroll hand-in-hand on the sandy shores, savor delectable seafood at beachfront shacks, and explore the charming streets of Old Goa. Our packages include luxurious accommodations, romantic dinners, and personalized experiences to make your honeymoon truly special.</p>
+                <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center mb-5">
+        <button type="button" class="btn btn-primary">More Packages</button>
+    </div>
+
+    <!-- Carousel -->
+    <div>
+        <h2>Special Festivals and Tours</h2>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="4000">
+                    <img src="https://polkajunction.com/wp-content/uploads/2017/10/Kathakali-polkajunction-e1597314116635.jpg" class="d-block w-100" alt="Kathakali" height="400px">
+                    <button type="button" class="btn btn-primary centered-button">More Details</button>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="https://niyaregency.com/blogs/wp-content/uploads/2024/04/Book-Your-Rooms-Today-to-Enjoy-Thrissur-Pooram-in-Comfort.jpg" class="d-block w-100" alt="Thrissur Pooram" height="400px">
+                    <button type="button" class="btn btn-primary centered-button">More Details</button>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="https://th-i.thgim.com/public/incoming/uljbda/article65666341.ece/alternates/FREE_1200/IMG_boat_race_1_1_FA8TNLCJ.jpg" class="d-block w-100" alt="Boat Race" height="400px">
+                    <button type="button" class="btn btn-primary centered-button">More Details</button>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+   
+ <!-- Card2 Section -->
+ <div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-md-3 mb-3">
+            <div class="cardclass">
+                <div class="card1"><img class="cardimg img-fluid" src="https://www.worldatlas.com/r/w2560-q80/upload/cf/3a/90/shutterstock-1400154155.jpg" alt=""></div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="cardclass">
+                <div class="card1"><img class="cardimg img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKsWaadZorrm4nhrj0JbMq5lsYgqswo_cD9w&s" alt=""></div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="cardclass">
+                <div class="card1"><img class="cardimg img-fluid" src="https://www.travelandleisure.com/thmb/wdUcyBQyQ0wUVs4wLahp0iWgZhc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/taj-mahal-agra-india-TAJ0217-9eab8f20d11d4391901867ed1ce222b8.jpg" alt=""></div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="cardclass">
+                <div class="card1"><img class="cardimg img-fluid" src="https://static.toiimg.com/photo/msid-93474335,width-96,height-65.cms" alt=""></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Our Premium Features Section -->
+<div class="container-fluid mt-5">
+    <h2 class="text-center">Our Premium Features</h2>
+    <div class="row">
+        <div class="col-md-3 mb-3">
+            <div class="second">
+                <div class="cardtwo"><img class="two img-fluid" src="https://cdn.pixabay.com/video/2022/02/02/106434-673008087_tiny.jpg" alt=""><p class="text-center">Free Bike Ride</p></div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="second">
+                <div class="cardtwo"><img class="two img-fluid" src="https://inline4.in/wp-content/uploads/2021/10/Camp-Fire-Sticker.png" alt=""><p class="text-center">Camp Fire</p></div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="second">
+                <div class="cardtwo"><img class="two img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3ImCFsM6NRy03sN98jkaXbPfAdLJ7LHO_UQ&s" alt=""><p class="text-center">24*7 Support</p></div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="second">
+                <div class="cardtwo"><img class="two img-fluid" src="https://img.myloview.com/stickers/tour-guide-with-group-of-tourists-cartoon-vector-illustration-isolated-on-white-background-group-of-tourists-listening-to-young-pretty-girl-guide-telling-something-interesting-sightseeing-400-92581283.jpg" alt=""><p class="text-center">Tour Guide</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid mt-5">
+    <h2 class="text-center">Our Customer Love</h2>
+    <div class="review row  ">
+        <div class="customer col-md-4  mt-5 mb-5">
+            <img class="reviewcus img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRv-tQsDKc1BzOeAdMQE6XEMaBni5f9tkPhg&s" alt="">
+            <img class="rating img-fluid" src="./rating.jpg" alt="">
+            <h3>Lisa</h3>
+            <p>Wonderful experiences</p>
+        </div>
+        <div class="customer col-md-4 mt-5 mb-5" >
+            <img class="reviewcus img-fluid" src="https://customersfirstacademy.com/wp-content/uploads/2021/04/strategies-for-Creating-a-Happy-Customer-1024x576.jpg" alt="">
+            <img class="rating img-fluid" src="./rating.jpg" alt="">
+            <h3>Robert</h3>
+            <p>Services provided by travel agent very good</p>
+        </div>
+        <div class="customer col-md-4 mt-5">
+            <img class="reviewcus img-fluid" src="https://majalahfranchise.com/wp-content/uploads/2021/03/Happy-Customer.jpg" alt="">
+            <img class="rating img-fluid" src="./rating.jpg" alt="">
+            <h3>David</h3>
+            <p>Everything is good, awesome trips. We enjoyed a lot with all the services like hotels, cab, etc..</p>
+        </div>
+    </div>
+</div>
+
+
+   
+<!-- footer -->
+<div class="footerl">
+<footer class="bg-dark text-white pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact Us</h5>
+                    <p><a class="text-white" style="text-decoration: none;" href="tel:+6235443930">6235443930</a></p>
+                    <p><a class="text-white" style="text-decoration: none;" href="mailto:travelspace@gmail.com">travelspace@gmail.com</a></p>
+                    <p class="text-white">Travel Space</p>
+                    <p class="text-white">Kochi</p>
+                    <p class="text-white">680332</p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Explore</h5>
+                    <p><a class="text-white" style="text-decoration: none;" href="#">Home</a></p>
+                    <p><a class="text-white" style="text-decoration: none;" href="#">Travel</a></p>
+                    <p><a class="text-white" style="text-decoration: none;" href="#">Gallery</a></p>
+                    <p><a class="text-white" style="text-decoration: none;" href="#">Contact</a></p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">About</h5>
+                    <p class="text-white">Travel Blog</p>
+                    <p class="text-white">Sharing the best travel destinations and tips</p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Follow Us</h5>
+                    <p><a class="text-white" style="text-decoration: none;" href="#">Facebook</a></p>
+                    <p><a class="text-white" style="text-decoration: none;" href="#">Twitter</a></p>
+                    <p><a class="text-white" style="text-decoration: none;" href="#">Instagram</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+<</p>
+</body>
+</body>
+</html>
